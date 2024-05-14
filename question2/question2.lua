@@ -50,7 +50,7 @@
 function validatePositiveInteger(input)
     local num = tonumber(input)
     if num == nil or num < 1 or num % 1 ~= 0 then
-        print("Invalid input: " .. input)
+        print("Error: invalid input: " .. input)
     else
         return num
     end
@@ -67,7 +67,7 @@ function printGuildNamesWithLessMembersThen(memberCount)
     local resultId = db.storeQuery(selectGuildQuery)
 
     if not resultId then
-        print("Error with database query")
+        print("Error: invalid database query")
         return
     end
 
